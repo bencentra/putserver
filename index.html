@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test</title>
+  </head>
+  <body>
+    <p>Testing if a status code 204 truly means "no content." Open the console to find out...</p>
+    <script
+      src="http://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        $.ajax('http://localhost:3000/test200', {
+          method: 'PUT'
+        }).done(function(data) {
+          console.log(200, data);
+        }).fail(function(error) {
+          console.error(error);
+        });
+
+        $.ajax('http://localhost:3000/test204', {
+          method: 'PUT'
+        }).done(function(data) {
+          console.log(204, data);
+        }).fail(function(error) {
+          console.error(error);
+        });
+      });
+    </script>
+  </body>
+</html>

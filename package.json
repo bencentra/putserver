@@ -1,0 +1,16 @@
+{
+  "name": "putserver",
+  "version": "1.0.0",
+  "description": "Testing out if a 204 status code really means \"no content\"",
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ben Centra <blcentra@gmail.com>",
+  "license": "MIT"
+}
